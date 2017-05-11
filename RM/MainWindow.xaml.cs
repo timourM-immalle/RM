@@ -35,73 +35,76 @@ namespace RM
         private void OpOperatorknopGeklikt()
         {
             cacheBlock.Text = schermBlock.Text;
-            cacheGetal = Convert.ToInt32(cacheBlock.Text); //kan ik ni ineens zeggen dat: cacheGetal = Convert.ToInt32(cacheblock.Text); ?
-            schermBlock.Text = ""; //Wrm nu ook al weer?
+            cacheGetal = Convert.ToInt32(cacheBlock.Text); //Kan ik ni ineens zeggen dat: cacheGetal = Convert.ToInt32(schermBlock.Text); ?
+            schermBlock.Text = "";
             huidigGetal = "";
         }
 
+        //button-eventhandlers der getalbuttons in een methode zetten met een Button als parameter
+
         private void btn1_Click(object sender, RoutedEventArgs e)
         {
-            schermBlock.Text += Convert.ToString(1);
+            schermBlock.Text += 1.ToString();
             huidigGetal += "1";
         }
 
         private void btn2_Click(object sender, RoutedEventArgs e)
         {
-            schermBlock.Text += Convert.ToString(2);
+            schermBlock.Text += 2.ToString();
             huidigGetal += "2";
         }
 
         private void Btn3_Click(object sender, RoutedEventArgs e)
         {
-            schermBlock.Text += Convert.ToString(3);
+            schermBlock.Text += 3.ToString();
             huidigGetal += "3";
         }
 
         private void btn4_Click(object sender, RoutedEventArgs e)
         {
-            schermBlock.Text += Convert.ToString(4);
+            schermBlock.Text += 4.ToString();
             huidigGetal += "4";
         }
 
         private void btn5_Click(object sender, RoutedEventArgs e)
         {
-            schermBlock.Text += Convert.ToString(5);
+            schermBlock.Text += 5.ToString();
             huidigGetal += "5";
         }
 
         private void btn6_Click(object sender, RoutedEventArgs e)
         {
-            schermBlock.Text += Convert.ToString(6);
+            schermBlock.Text += 6.ToString();
             huidigGetal += "6";
         }
 
         private void btn7_Click(object sender, RoutedEventArgs e)
         {
-            schermBlock.Text += Convert.ToString(7);
+            schermBlock.Text += 7.ToString();
             huidigGetal += "7";
         }
 
         private void btn8_Click(object sender, RoutedEventArgs e)
         {
-            schermBlock.Text += Convert.ToString(8);
+            schermBlock.Text += 8.ToString();
             huidigGetal += "8";
         }
 
         private void btn9_Click(object sender, RoutedEventArgs e)
         {
-            schermBlock.Text += Convert.ToString(9);
+            schermBlock.Text += 9.ToString();
             huidigGetal += "9";
         }
 
         private void btn0_Click(object sender, RoutedEventArgs e)
         {
-            schermBlock.Text += Convert.ToString(0);
+            schermBlock.Text += 0.ToString();
             huidigGetal += "0";
         }
 
         private void clearButton_Click(object sender, RoutedEventArgs e)
         {
+            //alles resetten
             schermBlock.Text = null;
             huidigGetal = "";
             cacheBlock.Text = null;
@@ -113,11 +116,13 @@ namespace RM
         private void optelButton_Click(object sender, RoutedEventArgs e)
         {
             OpOperatorknopGeklikt();
+            //hier som berekenen
         }
 
         private void aftrekButton_Click(object sender, RoutedEventArgs e)
         {
             OpOperatorknopGeklikt();
+            //hier verschil berekenen
         }
 
         private void uitkomstButton_Click(object sender, RoutedEventArgs e)
@@ -127,7 +132,7 @@ namespace RM
             schermBlock.Text = null;
             cacheBlock.Text = null;
 
-            //als er op optelButton werd geklikt, berekent het de som, anders het verschil
+            //resultaat berekenen a.d.h.v. resultaat, optelButton_Click(sender, e) en aftrekButton_Click(sender, e)
             schermBlock.Text = Convert.ToString(som);
         }
     }
