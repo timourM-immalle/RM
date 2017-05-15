@@ -32,6 +32,12 @@ namespace RM
             InitializeComponent();
         }
 
+        private void OpCijferknopGeklikt(int cijfer)
+        {
+            schermBlock.Text += cijfer.ToString();
+            huidigGetal += cijfer.ToString();
+        }
+
         private void OpOperatorknopGeklikt()
         {
             cacheBlock.Text = schermBlock.Text;
@@ -39,67 +45,56 @@ namespace RM
             schermBlock.Text = "";
             huidigGetal = "";
         }
-
         //button-eventhandlers der getalbuttons in een methode zetten met een Button als parameter
 
         private void btn1_Click(object sender, RoutedEventArgs e)
         {
-            schermBlock.Text += 1.ToString();
-            huidigGetal += "1";
+            OpCijferknopGeklikt(1);
         }
 
         private void btn2_Click(object sender, RoutedEventArgs e)
         {
-            schermBlock.Text += 2.ToString();
-            huidigGetal += "2";
+            OpCijferknopGeklikt(2);
         }
 
         private void Btn3_Click(object sender, RoutedEventArgs e)
         {
-            schermBlock.Text += 3.ToString();
-            huidigGetal += "3";
+            OpCijferknopGeklikt(3);
         }
 
         private void btn4_Click(object sender, RoutedEventArgs e)
         {
-            schermBlock.Text += 4.ToString();
-            huidigGetal += "4";
+            OpCijferknopGeklikt(4);
         }
 
         private void btn5_Click(object sender, RoutedEventArgs e)
         {
-            schermBlock.Text += 5.ToString();
-            huidigGetal += "5";
+            OpCijferknopGeklikt(5);
         }
 
         private void btn6_Click(object sender, RoutedEventArgs e)
         {
-            schermBlock.Text += 6.ToString();
-            huidigGetal += "6";
+            OpCijferknopGeklikt(6);
         }
 
         private void btn7_Click(object sender, RoutedEventArgs e)
         {
-            schermBlock.Text += 7.ToString();
-            huidigGetal += "7";
+            OpCijferknopGeklikt(7);
         }
 
         private void btn8_Click(object sender, RoutedEventArgs e)
         {
-            schermBlock.Text += 8.ToString();
-            huidigGetal += "8";
+            OpCijferknopGeklikt(8);
         }
 
         private void btn9_Click(object sender, RoutedEventArgs e)
         {
-            schermBlock.Text += 9.ToString();
-            huidigGetal += "9";
+            OpCijferknopGeklikt(9);
         }
 
         private void btn0_Click(object sender, RoutedEventArgs e)
         {
-            schermBlock.Text += 0.ToString();
-            huidigGetal += "0";
+            OpCijferknopGeklikt(0);
         }
 
         private void clearButton_Click(object sender, RoutedEventArgs e)
