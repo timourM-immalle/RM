@@ -140,7 +140,7 @@ namespace RM
         {
             som = Convert.ToInt32(huidigGetal) + cacheGetal;
             verschil = cacheGetal - Convert.ToInt32(huidigGetal);
-            product = Convert.ToInt32(huidigGetal) * cacheGetal;
+            product = Convert.ToInt32(huidigGetal) * cacheGetal; //NOG VERBETEREN
             //try en catch bij delen door 0
             schermBlock.Text = null;
             cacheBlock.Text = null;
