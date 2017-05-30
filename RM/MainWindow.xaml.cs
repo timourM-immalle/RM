@@ -26,6 +26,7 @@ namespace RM
         private int som = 0;
         private int cacheGetal = 0;
         private int verschil = 0;
+        private string bewerking;
 
         public MainWindow()
         {
@@ -111,13 +112,15 @@ namespace RM
         private void optelButton_Click(object sender, RoutedEventArgs e)
         {
             OpOperatorknopGeklikt();
-            //hier som berekenen
+            //som berekenen
+            bewerking = "optellen";
         }
 
         private void aftrekButton_Click(object sender, RoutedEventArgs e)
         {
             OpOperatorknopGeklikt();
-            //hier verschil berekenen
+            //verschil berekenen
+            bewerking = "aftrekken";
         }
 
         private void uitkomstButton_Click(object sender, RoutedEventArgs e)
@@ -127,8 +130,15 @@ namespace RM
             schermBlock.Text = null;
             cacheBlock.Text = null;
 
-            //resultaat berekenen a.d.h.v. resultaat, optelButton_Click(sender, e) en aftrekButton_Click(sender, e)
-            schermBlock.Text = Convert.ToString(som);
+            switch (bewerking)
+            {
+                case "optellen":
+                    schermBlock.Text = Convert.ToString(som);
+                    break;
+                case "aftrekken":
+                    schermBlock.Text = Convert.ToString(verschil);
+                    break;
+            }
         }
     }
 }
