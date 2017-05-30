@@ -22,10 +22,13 @@ namespace RM
     /// </summary>
     public partial class MainWindow : Window
     {
+        //later double enz.
         private string huidigGetal = "";
         private int som = 0;
-        private int cacheGetal = 0;
         private int verschil = 0;
+        private int product = 0;
+        private int quotiënt = 0;
+        private int cacheGetal = 0;
         private string bewerking;
 
         public MainWindow()
@@ -112,31 +115,46 @@ namespace RM
         private void optelButton_Click(object sender, RoutedEventArgs e)
         {
             OpOperatorknopGeklikt();
-            //som berekenen
             bewerking = "optellen";
         }
 
         private void aftrekButton_Click(object sender, RoutedEventArgs e)
         {
             OpOperatorknopGeklikt();
-            //verschil berekenen
             bewerking = "aftrekken";
+        }
+
+        private void vermenigvuldigButton_Click(object sender, RoutedEventArgs e)
+        {
+            OpOperatorknopGeklikt();
+            bewerking = "vermenivuldigen";
+        }
+
+        private void deelButton_Click(object sender, RoutedEventArgs e)
+        {
+            OpOperatorknopGeklikt();
+            bewerking = "delen";
         }
 
         private void uitkomstButton_Click(object sender, RoutedEventArgs e)
         {
             som = Convert.ToInt32(huidigGetal) + cacheGetal;
             verschil = cacheGetal - Convert.ToInt32(huidigGetal);
+            product = Convert.ToInt32(huidigGetal) * cacheGetal;
+            //try en catch bij delen door 0
             schermBlock.Text = null;
             cacheBlock.Text = null;
 
             switch (bewerking)
             {
                 case "optellen":
-                    schermBlock.Text = Convert.ToString(som);
+                    schermBlock.Text = som.ToString();
                     break;
                 case "aftrekken":
-                    schermBlock.Text = Convert.ToString(verschil);
+                    schermBlock.Text = verschil.ToString();
+                    break;
+                case "vermenigvuldigen":
+                    schermBlock.Text = product.ToString();
                     break;
             }
             //Hoe met neg. getallen?

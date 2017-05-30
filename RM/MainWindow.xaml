@@ -5,23 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RM"
         mc:Ignorable="d"
-        Title="Calculator" Height="400" Width="236.834">
+        Title="Calculator" Height="400" Width="300">
     <Grid>
-        <TextBlock x:Name="schermBlock" HorizontalAlignment="Right" Height="33" Margin="0,10,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="203"/>
-        <Button x:Name="btn1" Content="1" HorizontalAlignment="Left" Height="35" Margin="16,48,0,0" VerticalAlignment="Top" Width="47" Click="btn1_Click"/>
-        <Button x:Name="btn2" Content="2" HorizontalAlignment="Left" Height="35" Margin="68,48,0,0" VerticalAlignment="Top" Width="47" Click="btn2_Click"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="344*"/>
+            <RowDefinition Height="25*"/>
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="schermBlock" HorizontalAlignment="Right" Height="33" Margin="0,10,16,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="203"/>
+        <Button x:Name="btn1" Content="1" HorizontalAlignment="Left" Height="35" Margin="10,48,0,0" VerticalAlignment="Top" Width="47" Click="btn1_Click"/>
+        <Button x:Name="btn2" Content="2" HorizontalAlignment="Left" Height="35" Margin="62,48,0,0" VerticalAlignment="Top" Width="47" Click="btn2_Click"/>
         <Button x:Name="Btn3" Content="3" HorizontalAlignment="Left" Height="35" Margin="120,48,0,0" VerticalAlignment="Top" Width="47" Click="Btn3_Click"/>
-        <Button x:Name="optelButton" Content="+" HorizontalAlignment="Left" Height="35" Margin="172,48,0,0" VerticalAlignment="Top" Width="47" Click="optelButton_Click"/>
-        <Button x:Name="btn4" Content="4" HorizontalAlignment="Left" Height="35" Margin="16,88,0,0" VerticalAlignment="Top" Width="47" Click="btn4_Click"/>
-        <Button x:Name="btn5" Content="5" HorizontalAlignment="Left" Height="35" Margin="68,88,0,0" VerticalAlignment="Top" Width="47" Click="btn5_Click"/>
+        <Button x:Name="optelButton" Content="+" HorizontalAlignment="Left" Height="35" Margin="229,48,0,0" VerticalAlignment="Top" Width="47" Click="optelButton_Click"/>
+        <Button x:Name="btn4" Content="4" HorizontalAlignment="Left" Height="35" Margin="10,88,0,0" VerticalAlignment="Top" Width="47" Click="btn4_Click"/>
+        <Button x:Name="btn5" Content="5" HorizontalAlignment="Left" Height="35" Margin="62,88,0,0" VerticalAlignment="Top" Width="47" Click="btn5_Click"/>
         <Button x:Name="btn6" Content="6" HorizontalAlignment="Left" Height="35" Margin="120,88,0,0" VerticalAlignment="Top" Width="47" Click="btn6_Click"/>
-        <Button x:Name="aftrekButton" Content="-" HorizontalAlignment="Left" Height="35" Margin="172,88,0,0" VerticalAlignment="Top" Width="47" Click="aftrekButton_Click"/>
-        <Button x:Name="btn7" Content="7" HorizontalAlignment="Left" Height="35" Margin="16,128,0,0" VerticalAlignment="Top" Width="47" Click="btn7_Click"/>
-        <Button x:Name="btn8" Content="8" HorizontalAlignment="Left" Height="35" Margin="68,128,0,0" VerticalAlignment="Top" Width="47" Click="btn8_Click"/>
+        <Button x:Name="aftrekButton" Content="-" HorizontalAlignment="Left" Height="35" Margin="229,88,0,0" VerticalAlignment="Top" Width="47" Click="aftrekButton_Click"/>
+        <Button x:Name="btn7" Content="7" HorizontalAlignment="Left" Height="35" Margin="10,128,0,0" VerticalAlignment="Top" Width="47" Click="btn7_Click"/>
+        <Button x:Name="btn8" Content="8" HorizontalAlignment="Left" Height="35" Margin="62,128,0,0" VerticalAlignment="Top" Width="47" Click="btn8_Click"/>
         <Button x:Name="btn9" Content="9" HorizontalAlignment="Left" Height="35" Margin="120,128,0,0" VerticalAlignment="Top" Width="47" Click="btn9_Click"/>
-        <Button x:Name="uitkomstButton" Content="=" HorizontalAlignment="Left" Height="35" Margin="172,128,0,0" VerticalAlignment="Top" Width="47" Click="uitkomstButton_Click"/>
-        <Button x:Name="btn0" Content="0" HorizontalAlignment="Left" Height="35" Margin="16,168,0,0" VerticalAlignment="Top" Width="47" Click="btn0_Click"/>
-        <Button x:Name="clearButton" Content="CLEAR" HorizontalAlignment="Left" Height="35" Margin="120,168,0,0" VerticalAlignment="Top" Width="99" Click="clearButton_Click"/>
+        <Button x:Name="uitkomstButton" Content="=" HorizontalAlignment="Left" Height="35" Margin="229,213,0,0" VerticalAlignment="Top" Width="47" Click="uitkomstButton_Click"/>
+        <Button x:Name="btn0" Content="0" HorizontalAlignment="Left" Height="35" Margin="10,168,0,0" VerticalAlignment="Top" Width="47" Click="btn0_Click"/>
+        <Button x:Name="clearButton" Content="CLEAR" HorizontalAlignment="Left" Height="35" Margin="177,253,0,0" VerticalAlignment="Top" Width="99" Click="clearButton_Click"/>
         <TextBlock x:Name="cacheBlock" HorizontalAlignment="Left" Height="24" Margin="44,264,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="142"/>
+        <Button x:Name="vermenigvuldigButton" Content="x" HorizontalAlignment="Left" Height="35" Margin="229,123,0,0" VerticalAlignment="Top" Width="47" Click="vermenigvuldigButton_Click"/>
+        <Button x:Name="deelButton" Content="/" HorizontalAlignment="Left" Height="35" Margin="229,163,0,0" VerticalAlignment="Top" Width="47" Click="deelButton_Click"/>
     </Grid>
 </Window>
