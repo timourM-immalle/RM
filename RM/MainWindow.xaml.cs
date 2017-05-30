@@ -139,6 +139,7 @@ namespace RM
                     schermBlock.Text = Convert.ToString(verschil);
                     break;
             }
+            //Hoe met neg. getallen?
         }
     }
 }
