@@ -29,5 +29,6 @@
         <TextBlock x:Name="cacheBlock" HorizontalAlignment="Left" Height="24" Margin="44,264,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="142"/>
         <Button x:Name="vermenigvuldigButton" Content="x" HorizontalAlignment="Left" Height="35" Margin="229,123,0,0" VerticalAlignment="Top" Width="47" Click="vermenigvuldigButton_Click"/>
         <Button x:Name="deelButton" Content="/" HorizontalAlignment="Left" Height="35" Margin="229,163,0,0" VerticalAlignment="Top" Width="47" Click="deelButton_Click"/>
+        <Button x:Name="negatiefButton" Content="(-)" HorizontalAlignment="Left" Height="35" Margin="62,168,0,0" VerticalAlignment="Top" Width="47" Click="negatiefButton_Click"/>
     </Grid>
 </Window>

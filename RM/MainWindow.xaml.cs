@@ -27,7 +27,7 @@ namespace RM
         private int som = 0;
         private int verschil = 0;
         private int product = 0;
-        private int quotiënt = 0;
+        private int quotiënt = 0; //double ?
         private int cacheGetal = 0;
         private string bewerking;
 
@@ -141,6 +141,7 @@ namespace RM
             som = Convert.ToInt32(huidigGetal) + cacheGetal;
             verschil = cacheGetal - Convert.ToInt32(huidigGetal);
             product = Convert.ToInt32(huidigGetal) * cacheGetal; //NOG VERBETEREN
+            quotiënt = cacheGetal / Convert.ToInt32(huidigGetal);
             //try en catch bij delen door 0
             schermBlock.Text = null;
             cacheBlock.Text = null;
@@ -153,11 +154,16 @@ namespace RM
                 case "aftrekken":
                     schermBlock.Text = verschil.ToString();
                     break;
-                case "vermenigvuldigen":
+                case "vermenivuldigen":
                     schermBlock.Text = product.ToString();
                     break;
             }
             //Hoe met neg. getallen?
+        }
+
+        private void negatiefButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
