@@ -24,11 +24,12 @@ namespace RM
     {
         //later double enz.
         private string huidigGetal = "";
-        private int som = 0;
-        private int verschil = 0;
-        private int product = 0;
-        private int quotiënt = 0; //double ?
-        private int cacheGetal = 0;
+        private long som = 0;
+        private long verschil = 0;
+        private long product = 0;
+        private long quotiënt = 0; //double of float ?
+        private long rest = 0;
+        private long cacheGetal = 0;
         private string bewerking;
 
         public MainWindow()
@@ -139,9 +140,18 @@ namespace RM
         private void uitkomstButton_Click(object sender, RoutedEventArgs e)
         {
             som = Convert.ToInt32(huidigGetal) + cacheGetal;
-            verschil = cacheGetal - Convert.ToInt32(huidigGetal);
-            product = Convert.ToInt32(huidigGetal) * cacheGetal; //NOG VERBETEREN
-            quotiënt = cacheGetal / Convert.ToInt32(huidigGetal);
+            verschil = cacheGetal - Convert.ToInt64(huidigGetal);
+            product = Convert.ToInt32(huidigGetal) * cacheGetal;
+
+            if (Convert.ToInt64(huidigGetal) == 0)
+            {
+                MessageBox.Show("Error: niet delen door 0");
+            }
+            else
+            {
+                quotiënt = cacheGetal / Convert.ToInt64(huidigGetal);
+                rest = cacheGetal % Convert.ToInt64(huidigGetal);
+            }
             //try en catch bij delen door 0
             schermBlock.Text = null;
             cacheBlock.Text = null;
@@ -156,6 +166,13 @@ namespace RM
                     break;
                 case "vermenivuldigen":
                     schermBlock.Text = product.ToString();
+                    break;
+                case "delen":
+                    if (quotiënt != null)
+                    {
+                        //long delingresultaat = quotiënt + rest;
+                        schermBlock.Text = Convert.ToDouble(quotiënt).ToString(); //te verbeteren: doubles enz.
+                    }
                     break;
             }
             //Hoe met neg. getallen?
